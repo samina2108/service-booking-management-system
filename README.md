@@ -1,66 +1,254 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Service Booking Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A web-based **Service Booking Management System** built with Laravel 9 and Bootstrap 5. The system allows administrators and users to manage services, customers, bookings, and related activities through a role-based access control system.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* 🔐 Authentication — Login, Registration, Password Management
+* 👥 Role-Based Access Control — Admin and User roles
+* 📊 Dashboard with booking and revenue statistics
+* 🛠️ Service Management — Create, View, Edit, Delete
+* 👤 Customer Management — Create, View, Edit, Delete
+* 📅 Booking Management — Create, View, Edit, Delete
+* 🔄 Booking Status Management
+* 🧾 Booking Invoice with Print functionality
+* 📝 Activity Logs for tracking system activities
+* 🔎 Search and filtering
+* 📄 Pagination
+* 👨‍💼 User Management for administrators
+* 👤 User Profile Management
+* 📱 Responsive Bootstrap 5 interface
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Admin Access
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Administrators have access to:
 
-## Learning Laravel
+* Dashboard
+* Services
+* Customers
+* Bookings
+* Users
+* Activity Logs
+* Profile
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## User Access
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Normal users can access the main operational modules according to their assigned permissions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Administrative modules such as **Users** and **Activity Logs** are restricted to administrators.
 
-## Laravel Sponsors
+## Technologies Used
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* **PHP**
+* **Laravel 9**
+* **MySQL**
+* **Bootstrap 5**
+* **Blade Templates**
+* **JavaScript**
+* **jQuery**
+* **Laravel Breeze**
+* **Eloquent ORM**
+* **Git & GitHub**
 
-### Premium Partners
+## Project Modules
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Dashboard
 
-## Contributing
+Provides an overview of:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Total Services
+* Active and Inactive Services
+* Total Customers
+* Total Bookings
+* Booking Status Statistics
+* Completed Booking Revenue
+* Recent Bookings
 
-## Code of Conduct
+### Service Management
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Administrators and users can manage service records including:
 
-## Security Vulnerabilities
+* Service Name
+* Description
+* Price
+* Status
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Customer Management
+
+The customer module provides:
+
+* Customer registration
+* Customer details
+* Customer search
+* Customer editing
+* Customer deletion based on permissions
+
+### Booking Management
+
+Bookings include:
+
+* Customer
+* Service
+* Booking Date
+* Booking Time
+* Price
+* Booking Status
+* Notes
+
+Available booking statuses:
+
+* Pending
+* Confirmed
+* Completed
+* Cancelled
+
+### Activity Logs
+
+The system records important activities such as:
+
+* Booking creation
+* Booking updates
+* Booking deletion
+* Booking status changes
+* Customer activities
+* Service activities
+
+Administrators can search, filter, view, export, and delete activity logs.
+
+### Role-Based Access Control
+
+The application uses a dedicated **Role model** and `role_id` relationship.
+
+Available roles:
+
+* Admin
+* User
+
+Permissions are controlled through middleware and role checks.
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/samina2108/service-booking-management-system.git
+cd service-booking-management-system
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Create Environment File
+
+Copy `.env.example` to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+For Windows:
+
+```bash
+copy .env.example .env
+```
+
+### 4. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 5. Configure Database
+
+Open `.env` and configure your MySQL database:
+
+```env
+DB_DATABASE=service_booking
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 6. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 7. Seed Roles
+
+```bash
+php artisan db:seed
+```
+
+### 8. Start Laravel Development Server
+
+```bash
+php artisan serve
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Database
+
+The project uses **MySQL** with Laravel migrations for database structure.
+
+Main database entities include:
+
+* Users
+* Roles
+* Services
+* Customers
+* Bookings
+* Activity Logs
+
+## Security
+
+The application includes:
+
+* Authentication
+* CSRF protection
+* Password hashing
+* Role-based authorization
+* Admin middleware
+* Permission-based route protection
+* Validation for user input
+
+## Project Structure
+
+```text
+service-booking/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   └── Requests/
+│   └── Models/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── resources/
+│   └── views/
+├── routes/
+├── public/
+├── storage/
+├── tests/
+├── composer.json
+└── README.md
+```
+
+## GitHub Repository
+
+**Repository:**
+
+https://github.com/samina2108/service-booking-management-system
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is developed as a portfolio project using the Laravel framework.
