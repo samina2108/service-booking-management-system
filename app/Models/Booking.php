@@ -17,6 +17,8 @@ class Booking extends Model
         'booking_time',
         'price',
         'status',
+        'payment_status',
+        'notes',
         'notes',
     ];
 

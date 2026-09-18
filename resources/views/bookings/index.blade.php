@@ -166,6 +166,8 @@
 
                                 <th>Status</th>
 
+                                <th>Payment Status</th>
+
                                 <th>Actions</th>
 
                             </tr>
@@ -254,6 +256,18 @@
                                         </form>
 
                                     </td>
+
+
+                                    {{-- Payment Status --}}
+<td>
+    @if($booking->payment_status == 'paid')
+        <span class="badge bg-success">Paid</span>
+    @elseif($booking->payment_status == 'refunded')
+        <span class="badge bg-warning text-dark">Refunded</span>
+    @else
+        <span class="badge bg-secondary">Unpaid</span>
+    @endif
+</td>
 
 
                                     {{-- Actions --}}

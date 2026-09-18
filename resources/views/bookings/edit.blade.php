@@ -159,6 +159,34 @@
                         </select>
                     </div>
 
+                    {{-- Payment Status --}}
+<div class="col-md-6 mb-3">
+    <label for="payment_status" class="form-label">
+        Payment Status
+    </label>
+
+    <select name="payment_status"
+            id="payment_status"
+            class="form-control">
+
+        <option value="unpaid"
+            {{ $booking->payment_status == 'unpaid' ? 'selected' : '' }}>
+            Unpaid
+        </option>
+
+        <option value="paid"
+            {{ $booking->payment_status == 'paid' ? 'selected' : '' }}>
+            Paid
+        </option>
+
+        <option value="refunded"
+            {{ $booking->payment_status == 'refunded' ? 'selected' : '' }}>
+            Refunded
+        </option>
+
+    </select>
+</div>
+
                     {{-- Notes --}}
                     <div class="col-md-12 mb-3">
                         <label for="notes" class="form-label">

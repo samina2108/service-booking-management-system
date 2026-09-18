@@ -129,7 +129,19 @@
                             <option value="cancelled">Cancelled</option>
                         </select>
                     </div>
+                    
+                    {{-- Payment Status --}}
+<div class="col-md-6 mb-3">
+    <label for="payment_status" class="form-label">
+        Payment Status
+    </label>
 
+    <select name="payment_status" id="payment_status" class="form-control">
+        <option value="unpaid" selected>Unpaid</option>
+        <option value="paid">Paid</option>
+        <option value="refunded">Refunded</option>
+    </select>
+</div>
                     {{-- Notes --}}
                     <div class="col-md-12 mb-3">
                         <label for="notes" class="form-label">

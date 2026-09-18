@@ -72,6 +72,7 @@ class BookingController extends Controller
         'booking_time' => 'required',
         'price' => 'required|numeric',
         'status' => 'required|in:pending,confirmed,completed,cancelled',
+        'payment_status' => 'required|in:unpaid,paid,refunded',
         'notes' => 'nullable|string',
     ]);
 
@@ -137,6 +138,7 @@ class BookingController extends Controller
         'booking_time' => 'required|date_format:H:i',
         'price' => 'required|numeric|min:0',
         'status' => 'required|in:pending,confirmed,completed,cancelled',
+        'payment_status' => 'required|in:unpaid,paid,refunded',
         'notes' => 'nullable|string',
     ]);
 
