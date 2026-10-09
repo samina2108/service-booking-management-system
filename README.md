@@ -23,6 +23,29 @@ A web-based **Service Booking Management System** built with Laravel 9 and Boots
 * 👤 User Profile Management
 * 📱 Responsive Bootstrap 5 interface
 
+## 🔑 Demo Credentials
+
+**Admin**
+- Email: admin@demo.com
+- Password: (demo password)
+
+**User**
+- Email: samina@gmail.com
+- Password: (samina12345)
+
+> These are demo accounts only.
+
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard](Screenshots/dashboard.png)
+
+### Create Booking
+![Booking Form](Screenshots/booking-form.png)
+
+### Booking Invoice
+![Invoice](Screenshots/invoice.png)
+
 ## Admin Access
 
 Administrators have access to:
