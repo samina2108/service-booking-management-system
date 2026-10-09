@@ -31,7 +31,7 @@ A web-based **Service Booking Management System** built with Laravel 9 and Boots
 
 **User**
 - Email: samina@gmail.com
-- Password: (samina12345)
+- Password: (12345678)
 
 > These are demo accounts only.
 
